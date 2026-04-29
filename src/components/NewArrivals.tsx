@@ -6,58 +6,58 @@ const NewArrivals = () => {
   const products = [
     {
       id: 1,
-      name: "Premium Silk Hijab",
-      category: "Hijabs",
-      price: "$25",
+      name: "Premium Leather Boots",
+      category: "Boots",
+      price: "$125",
       location: "New York, NY",
       badges: ["New"],
-      frontImage: "https://framerusercontent.com/images/TITuLcYSx53fInKnsoSGfE8Xuw.jpg",
-      backImage: "https://framerusercontent.com/images/rO3nueqqdzWMFmQMfScFEHQKDK8.jpg",
-      href: "./listing/premium-silk-hijab-1"
+      frontImage: "/boot_1.png",
+      backImage: "/boot_1.png",
+      href: "./shoes/premium-leather-boots-1"
     },
     {
       id: 2,
-      name: "Black Abaya Set",
-      category: "Abayas",
+      name: "Classic High-Top Sneakers",
+      category: "Sneakers",
       price: "$85",
       location: "Los Angeles, CA",
       badges: ["New"],
-      frontImage: "https://framerusercontent.com/images/TzE4HV2Rd2nSnBPovKnaeVJ4ig.jpg",
-      backImage: "https://framerusercontent.com/images/Go8FgbJq5k83GEHQpJxfiOfyU.jpg",
-      href: "./listing/black-abaya-set"
+      frontImage: "/sneaker_1.png",
+      backImage: "/sneaker_1.png",
+      href: "./shoes/classic-high-top-sneakers"
     },
     {
       id: 3,
-      name: "Modest Jersey Dress",
-      category: "Modest Wear",
-      price: "$45",
+      name: "Comfort Running Shoes",
+      category: "Athletic",
+      price: "$145",
       location: "Chicago, IL",
       badges: ["New"],
-      frontImage: "https://framerusercontent.com/images/tgZdGQSoxXaU1e2WoJLa4YQ.jpg",
-      backImage: "https://framerusercontent.com/images/dVQplzo9TYGR0ic60Unw0TJjI.jpg",
-      href: "./listing/modest-jersey-dress"
+      frontImage: "/running_1.png",
+      backImage: "/running_1.png",
+      href: "./shoes/comfort-running-shoes"
     },
     {
       id: 4,
-      name: "Designer Scarf Collection",
-      category: "Accessories",
-      price: "$35",
+      name: "Elegant Formal Oxfords",
+      category: "Formal",
+      price: "$135",
       location: "Houston, TX",
       badges: ["New", "Featured"],
-      frontImage: "https://framerusercontent.com/images/WCPUxU8le7cGYEMic8GQuKrQTLI.jpg",
-      backImage: "https://framerusercontent.com/images/D9XYlok0cgs0AR1T9UYgXebum4.jpg",
-      href: "./listing/designer-scarf-collection"
+      frontImage: "/oxford_1.png",
+      backImage: "/oxford_1.png",
+      href: "./shoes/elegant-formal-oxfords"
     }
   ];
 
   return (
-    <section className="overflow-hidden bg-black" data-framer-name="Recent Listings">
+    <section className="overflow-hidden bg-white" data-framer-name="Recent Arrivals">
       <div className="flex h-screen">
         {/* Left Side - Fixed Background Image with Title */}
         <div className="w-2/5 relative flex flex-col">
           <div className="flex-1 relative">
             <img 
-              src="https://framerusercontent.com/images/ShqTo2F5a7sLxDmCPO2CSO76iQ.jpg"
+              src="/hero_boots.png"
               alt=""
               className="w-full h-full object-cover object-center"
               width="1280"
@@ -66,8 +66,8 @@ const NewArrivals = () => {
             {/* Hotspot Pulse */}
             <div className="absolute top-1/2 right-1/3 transform translate-x-1/2 -translate-y-1/2">
               <div className="relative">
-                <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center">
-                  <div className="w-3 h-3 bg-white rounded-full"></div>
+                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center">
+                  <div className="w-3 h-3 bg-black rounded-full"></div>
                 </div>
               </div>
             </div>
@@ -86,22 +86,22 @@ const NewArrivals = () => {
             </a>
             <h2 className="text-6xl xl:text-7xl font-bold text-white leading-none">
               <div>RECENT</div>
-              <div>LISTINGS</div>
+              <div>ARRIVALS</div>
             </h2>
           </div>
         </div>
 
         {/* Right Side - Scrollable Products Grid */}
-        <div className="w-3/5 bg-black overflow-y-auto">
+        <div className="w-3/5 bg-white overflow-y-auto">
           <div className="grid grid-cols-2 h-full">
             {products.map((product) => (
               <a
                 key={product.id}
                 href={product.href}
-                className="group bg-black border border-gray-700 block w-full h-full flex flex-col"
+                className="group bg-white border border-gray-200 block w-full h-full flex flex-col"
                 style={{
-                  borderColor: "rgb(122, 122, 122)",
-                  backgroundColor: "rgb(0, 0, 0)"
+                  borderColor: "rgb(229, 231, 235)",
+                  backgroundColor: "rgb(255, 255, 255)"
                 }}
               >
                 {/* Badges */}
@@ -112,11 +112,11 @@ const NewArrivals = () => {
                         <div 
                           className={`px-3 py-1 text-xs font-medium ${
                             badge === "Best Seller"
-                              ? "bg-orange-500 text-black"
-                              : "bg-gray-800 text-white border border-gray-600"
+                              ? "bg-orange-500 text-white"
+                              : "bg-gray-100 text-black border border-gray-200"
                           }`}
                         >
-                          <p className="text-white m-0 font-medium text-xs">{badge}</p>
+                          <p className="text-black m-0 font-medium text-xs">{badge}</p>
                         </div>
                       </div>
                     ))}
@@ -124,37 +124,29 @@ const NewArrivals = () => {
                 </div>
 
                 {/* Images */}
-                <div className="flex-1 relative">
-                  <div className="absolute inset-0">
-                    <img
-                      src={product.frontImage}
-                      alt=""
-                      className="block w-full h-full object-cover object-top group-hover:opacity-0 transition-opacity duration-300"
-                      width="1280"
-                      height="896"
-                    />
-                  </div>
-                  <div className="absolute inset-0">
-                    <img
-                      src={product.backImage}
-                      alt=""
-                      className="block w-full h-full object-cover object-top opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      width="1280"
-                      height="896"
-                    />
-                  </div>
+                <div className="flex-1 relative bg-gray-50 overflow-hidden">
+                  <img
+                    src={product.frontImage}
+                    alt=""
+                    className="absolute inset-0 block w-full h-full object-cover object-center group-hover:opacity-0 transition-opacity duration-300"
+                  />
+                  <img
+                    src={product.backImage}
+                    alt=""
+                    className="absolute inset-0 block w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
                 </div>
 
                 {/* Product Info */}
-                <div className="p-4 flex-shrink-0 border-t border-gray-700">
+                <div className="p-4 flex-shrink-0 border-t border-gray-200">
                   <div className="mb-3">
                     <p 
                       className="m-0 text-sm mb-1"
-                      style={{color: "rgb(122, 122, 122)"}}
+                      style={{color: "rgb(107, 114, 128)"}}
                     >
                       {product.category}
                     </p>
-                    <p className="text-white m-0 text-lg font-medium leading-tight">
+                    <p className="text-black m-0 text-lg font-medium leading-tight">
                       {product.name}
                     </p>
                   </div>
@@ -163,7 +155,7 @@ const NewArrivals = () => {
                     <p 
                       className="m-0 font-bold text-2xl leading-none"
                       style={{
-                        color: "rgb(255, 255, 255)",
+                        color: "rgb(0, 0, 0)",
                         fontFamily: '"Mona Sans", "Mona Sans Placeholder", sans-serif',
                         fontSize: "24px",
                         fontWeight: "700",
@@ -180,12 +172,12 @@ const NewArrivals = () => {
                         viewBox="0 0 16 16" 
                         fill="none"
                         style={{
-                          fill: "white",
-                          color: "white",
+                          fill: "black",
+                          color: "black",
                           transform: "rotate(-45deg)"
                         }}
                       >
-                        <path d="M8 0L16 8L8 16L8 10L0 10L0 6L8 6L8 0Z" fill="white"/>
+                        <path d="M8 0L16 8L8 16L8 10L0 10L0 6L8 6L8 0Z" fill="black"/>
                       </svg>
                     </div>
                   </div>

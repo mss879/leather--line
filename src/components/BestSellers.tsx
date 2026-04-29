@@ -6,64 +6,64 @@ const BestSellers = () => {
   const products = [
     {
       id: 1,
-      name: "Chiffon Hijab Bundle",
-      category: "Hijabs",
-      price: "$40",
+      name: "Limited Edition Sneakers",
+      category: "Sneakers",
+      price: "$240",
       location: "Miami, FL",
       badges: ["Featured"],
-      frontImage: "https://framerusercontent.com/images/TITuLcYSx53fInKnsoSGfE8Xuw.jpg",
-      backImage: "https://framerusercontent.com/images/rO3nueqqdzWMFmQMfScFEHQKDK8.jpg",
-      href: "./listing/chiffon-hijab-bundle"
+      frontImage: "/sneaker_2.png",
+      backImage: "/sneaker_2.png",
+      href: "./shoes/limited-edition-sneakers"
     },
     {
       id: 2,
-      name: "Elegant Evening Abaya",
-      category: "Abayas",
+      name: "Premium Leather Loafers",
+      category: "Formal",
       price: "$120",
       location: "Dallas, TX",
       badges: ["Featured"],
-      frontImage: "https://framerusercontent.com/images/TzE4HV2Rd2nSnBPovKnaeVJ4ig.jpg",
-      backImage: "https://framerusercontent.com/images/Go8FgbJq5k83GEHQpJxfiOfyU.jpg",
-      href: "./listing/elegant-evening-abaya"
+      frontImage: "/loafer_1.png",
+      backImage: "/loafer_1.png",
+      href: "./shoes/premium-leather-loafers"
     },
     {
       id: 3,
-      name: "Modest Maxi Dress",
-      category: "Modest Wear",
-      price: "$55",
+      name: "Trail Running Shoes",
+      category: "Athletic",
+      price: "$155",
       location: "Atlanta, GA",
       badges: ["Featured"],
-      frontImage: "https://framerusercontent.com/images/tgZdGQSoxXaU1e2WoJLa4YQ.jpg",
-      backImage: "https://framerusercontent.com/images/dVQplzo9TYGR0ic60Unw0TJjI.jpg",
-      href: "./listing/modest-maxi-dress"
+      frontImage: "/running_2.png",
+      backImage: "/running_2.png",
+      href: "./shoes/trail-running-shoes"
     },
     {
       id: 4,
-      name: "Luxury Handbag Set",
-      category: "Accessories",
+      name: "Casual Slip-On Shoes",
+      category: "Casual",
       price: "$75",
       location: "Boston, MA",
       badges: ["Featured"],
-      frontImage: "https://framerusercontent.com/images/WCPUxU8le7cGYEMic8GQuKrQTLI.jpg",
-      backImage: "https://framerusercontent.com/images/D9XYlok0cgs0AR1T9UYgXebum4.jpg",
-      href: "./listing/luxury-handbag-set"
+      frontImage: "/slip_on_1.png",
+      backImage: "/slip_on_1.png",
+      href: "./shoes/casual-slip-on-shoes"
     }
   ];
 
   return (
-    <section className="overflow-hidden bg-black" data-framer-name="Featured Listings">
+    <section className="overflow-hidden bg-white" data-framer-name="Featured Shoes">
       <div className="flex h-screen">
         {/* Left Side - Scrollable Products Grid */}
-        <div className="w-3/5 bg-black overflow-y-auto">
+        <div className="w-3/5 bg-white overflow-y-auto">
           <div className="grid grid-cols-2 h-full">
             {products.map((product) => (
               <a
                 key={product.id}
                 href={product.href}
-                className="group bg-black border border-gray-700 block w-full h-full flex flex-col"
+                className="group bg-white border border-gray-200 block w-full h-full flex flex-col"
                 style={{
-                  borderColor: "rgb(122, 122, 122)",
-                  backgroundColor: "rgb(0, 0, 0)"
+                  borderColor: "rgb(229, 231, 235)",
+                  backgroundColor: "rgb(255, 255, 255)"
                 }}
               >
                 {/* Badges */}
@@ -74,11 +74,11 @@ const BestSellers = () => {
                         <div 
                           className={`px-3 py-1 text-xs font-medium ${
                             badge === "Best Seller"
-                              ? "bg-orange-500 text-black"
-                              : "bg-gray-800 text-white border border-gray-600"
+                              ? "bg-orange-500 text-white"
+                              : "bg-gray-100 text-black border border-gray-200"
                           }`}
                         >
-                          <p className="text-white m-0 font-medium text-xs">{badge}</p>
+                          <p className="text-black m-0 font-medium text-xs">{badge}</p>
                         </div>
                       </div>
                     ))}
@@ -86,37 +86,29 @@ const BestSellers = () => {
                 </div>
 
                 {/* Images */}
-                <div className="flex-1 relative">
-                  <div className="absolute inset-0">
-                    <img
-                      src={product.frontImage}
-                      alt=""
-                      className="block w-full h-full object-cover object-top group-hover:opacity-0 transition-opacity duration-300"
-                      width="1280"
-                      height="896"
-                    />
-                  </div>
-                  <div className="absolute inset-0">
-                    <img
-                      src={product.backImage}
-                      alt=""
-                      className="block w-full h-full object-cover object-top opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      width="1280"
-                      height="896"
-                    />
-                  </div>
+                <div className="flex-1 relative bg-gray-50 overflow-hidden">
+                  <img
+                    src={product.frontImage}
+                    alt=""
+                    className="absolute inset-0 block w-full h-full object-cover object-center group-hover:opacity-0 transition-opacity duration-300"
+                  />
+                  <img
+                    src={product.backImage}
+                    alt=""
+                    className="absolute inset-0 block w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
                 </div>
 
                 {/* Product Info */}
-                <div className="p-4 flex-shrink-0 border-t border-gray-700">
+                <div className="p-4 flex-shrink-0 border-t border-gray-200">
                   <div className="mb-3">
                     <p 
                       className="m-0 text-sm mb-1"
-                      style={{color: "rgb(122, 122, 122)"}}
+                      style={{color: "rgb(107, 114, 128)"}}
                     >
                       {product.category}
                     </p>
-                    <p className="text-white m-0 text-lg font-medium leading-tight">
+                    <p className="text-black m-0 text-lg font-medium leading-tight">
                       {product.name}
                     </p>
                   </div>
@@ -125,7 +117,7 @@ const BestSellers = () => {
                     <p 
                       className="m-0 font-bold text-2xl leading-none"
                       style={{
-                        color: "rgb(255, 255, 255)",
+                        color: "rgb(0, 0, 0)",
                         fontFamily: '"Mona Sans", "Mona Sans Placeholder", sans-serif',
                         fontSize: "24px",
                         fontWeight: "700",
@@ -142,12 +134,12 @@ const BestSellers = () => {
                         viewBox="0 0 16 16" 
                         fill="none"
                         style={{
-                          fill: "white",
-                          color: "white",
+                          fill: "black",
+                          color: "black",
                           transform: "rotate(-45deg)"
                         }}
                       >
-                        <path d="M8 0L16 8L8 16L8 10L0 10L0 6L8 6L8 0Z" fill="white"/>
+                        <path d="M8 0L16 8L8 16L8 10L0 10L0 6L8 6L8 0Z" fill="black"/>
                       </svg>
                     </div>
                   </div>
@@ -161,7 +153,7 @@ const BestSellers = () => {
         <div className="w-2/5 relative flex flex-col">
           <div className="flex-1 relative">
             <img 
-              src="https://framerusercontent.com/images/ShqTo2F5a7sLxDmCPO2CSO76iQ.jpg"
+              src="/hero_sneakers.png"
               alt=""
               className="w-full h-full object-cover object-center"
               width="1280"
@@ -170,8 +162,8 @@ const BestSellers = () => {
             {/* Hotspot Pulse */}
             <div className="absolute top-1/2 left-1/3 transform -translate-x-1/2 -translate-y-1/2">
               <div className="relative">
-                <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center">
-                  <div className="w-3 h-3 bg-white rounded-full"></div>
+                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center">
+                  <div className="w-3 h-3 bg-black rounded-full"></div>
                 </div>
               </div>
             </div>
@@ -190,7 +182,7 @@ const BestSellers = () => {
             </a>
             <h2 className="text-6xl xl:text-7xl font-bold text-white leading-none">
               <div>FEATURED</div>
-              <div>LISTINGS</div>
+              <div>SHOES</div>
             </h2>
           </div>
         </div>

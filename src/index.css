@@ -38,9 +38,9 @@ All colors MUST be HSL.
     --ring: 0 0% 0%;
 
     /* Boutique specific tokens */
-    --nav-bg: 0 0% 0%;
-    --nav-text: 0 0% 100%;
-    --nav-border: 0 0% 48%;
+    --nav-bg: 0 0% 100%;
+    --nav-text: 0 0% 0%;
+    --nav-border: 0 0% 90%;
     --hero-overlay: 0 0% 0%;
     --hero-text: 0 0% 100%;
     --hero-muted: 0 0% 75%;
@@ -173,10 +173,10 @@ All colors MUST be HSL.
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-33.333%);
+    transform: translateX(-50%);
   }
 }
 
 .animate-scroll-left {
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 120s linear infinite;
 }

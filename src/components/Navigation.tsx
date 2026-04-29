@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Search, User, Plus, ChevronDown } from 'lucide-react';
+import { Menu, X, Search, User, ShoppingBag, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navigation = () => {
@@ -10,9 +10,9 @@ const Navigation = () => {
   const [isShopDropdownOpen, setIsShopDropdownOpen] = useState(false);
 
   const promoTexts = [
-    "Post your hijab listings for free",
-    "Connect with buyers across the country", 
-    "Safe and secure marketplace"
+    "Free shipping on all orders over $100",
+    "New arrivals from top brands", 
+    "Premium footwear for every occasion"
   ];
 
   useEffect(() => {
@@ -31,17 +31,15 @@ const Navigation = () => {
     <nav className="w-full bg-nav-bg text-nav-text relative z-50">
       {/* Single Navigation Row */}
       <div className="border-b border-t border-nav-border">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center h-16">
+        <div className="w-full px-4 md:px-8">
+          <div className="flex items-center h-20">
             {/* Logo */}
-            <div className="flex-shrink-0 border-r border-nav-border h-16 flex items-center px-8 py-1">
-              <h1 className="text-3xl font-black tracking-tight text-nav-text">
-                IKMAN
-              </h1>
+            <div className="flex-shrink-0 border-r border-nav-border h-20 flex items-center px-8 py-1">
+              <img src="/leather-line.jpg" alt="Leather Line Logo" className="h-14 w-auto object-contain" />
             </div>
 
             {/* Center Promotional Text Cycle */}
-            <div className="hidden md:flex flex-1 justify-center border-r border-nav-border h-16 items-center relative overflow-hidden">
+            <div className="hidden md:flex w-64 lg:w-96 flex-shrink-0 justify-center border-r border-nav-border h-20 items-center relative overflow-hidden">
               <div className="relative w-full h-full flex items-center justify-center">
                 {promoTexts.map((text, index) => (
                   <div
@@ -74,7 +72,7 @@ const Navigation = () => {
             </div>
 
             {/* Right Side - Navigation Links and Icons */}
-            <div className="hidden md:flex items-center">
+            <div className="hidden md:flex flex-1 items-center">
               {/* Navigation Links */}
               <div 
                 className="relative"
@@ -83,7 +81,7 @@ const Navigation = () => {
               >
                 <a 
                   href="#browse" 
-                  className="relative overflow-hidden px-8 border-r border-nav-border h-16 flex items-center group min-w-[120px]"
+                  className="relative overflow-hidden px-8 border-r border-nav-border h-20 flex items-center group min-w-[120px]"
                 >
                   {/* Top Layer */}
                   <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:-translate-y-full">
@@ -101,54 +99,22 @@ const Navigation = () => {
                   </div>
                 </a>
               </div>
-              <a 
-                href="#about" 
-                className="relative overflow-hidden px-8 border-r border-nav-border h-16 flex items-center group min-w-[110px]"
-              >
-                {/* Top Layer */}
-                <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:-translate-y-full">
-                  <span className="text-base font-bold tracking-wide uppercase text-nav-text">
-                    ABOUT
-                  </span>
+              {/* Search Bar */}
+              <div className="flex flex-1 items-center h-20 px-6 border-r border-nav-border min-w-[200px]">
+                <div className="relative w-full group">
+                  <input 
+                    type="text" 
+                    placeholder="Search shoes, brands, etc..." 
+                    className="w-full bg-transparent border-b border-nav-border/50 py-1.5 pr-8 text-nav-text text-sm uppercase tracking-wide placeholder:text-nav-text/40 focus:outline-none focus:border-nav-text transition-colors"
+                  />
+                  <Search size={16} className="absolute right-0 top-1/2 -translate-y-1/2 text-nav-text/40 group-focus-within:text-nav-text transition-colors" />
                 </div>
-                {/* Bottom Layer */}
-                <div className="absolute inset-0 flex items-center justify-center bg-nav-text text-nav-bg transition-all duration-300 ease-in-out opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0">
-                  <span className="text-base font-bold tracking-wide uppercase">
-                    ABOUT
-                  </span>
-                </div>
-              </a>
-              <a 
-                href="#contact" 
-                className="relative overflow-hidden px-8 border-r border-nav-border h-16 flex items-center group min-w-[120px]"
-              >
-                {/* Top Layer */}
-                <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:-translate-y-full">
-                  <span className="text-base font-bold tracking-wide uppercase text-nav-text">
-                    CONTACT
-                  </span>
-                </div>
-                {/* Bottom Layer */}
-                <div className="absolute inset-0 flex items-center justify-center bg-nav-text text-nav-bg transition-all duration-300 ease-in-out opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0">
-                  <span className="text-base font-bold tracking-wide uppercase">
-                    CONTACT
-                  </span>
-                </div>
-              </a>
-
-              {/* Action Icons */}
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-nav-text h-16 px-4 border-r border-nav-border"
-              >
-                <Search size={20} />
-              </Button>
+              </div>
               
               {/* Sign In Button - Wider */}
               <a 
                 href="#signin" 
-                className="relative overflow-hidden px-12 border-r border-nav-border h-16 flex items-center group min-w-[140px]"
+                className="relative overflow-hidden px-12 border-r border-nav-border h-20 flex items-center group min-w-[140px]"
               >
                 {/* Top Layer */}
                 <div className="absolute inset-0 flex items-center justify-center gap-2 transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:-translate-y-full">
@@ -166,23 +132,25 @@ const Navigation = () => {
                 </div>
               </a>
 
-              {/* Create Listing Button */}
+
+
+              {/* Cart Button */}
               <a 
-                href="#create-listing" 
-                className="relative overflow-hidden px-10 h-16 flex items-center group min-w-[180px]"
+                href="#cart" 
+                className="relative overflow-hidden px-8 h-20 flex items-center group min-w-[120px]"
               >
                 {/* Top Layer */}
                 <div className="absolute inset-0 flex items-center justify-center gap-2 transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:-translate-y-full">
-                  <Plus size={20} className="text-nav-text" />
+                  <ShoppingBag size={20} className="text-nav-text" />
                   <span className="text-base font-bold tracking-wide uppercase text-nav-text">
-                    CREATE LISTING
+                    CART
                   </span>
                 </div>
                 {/* Bottom Layer */}
                 <div className="absolute inset-0 flex items-center justify-center gap-2 bg-nav-text text-nav-bg transition-all duration-300 ease-in-out opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0">
-                  <Plus size={20} />
+                  <ShoppingBag size={20} />
                   <span className="text-base font-bold tracking-wide uppercase">
-                    CREATE LISTING
+                    CART
                   </span>
                 </div>
               </a>
@@ -202,50 +170,27 @@ const Navigation = () => {
               {/* Top Layer */}
               <div className="absolute inset-0 flex items-center transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:-translate-y-full">
                 <span className="text-lg font-medium tracking-wide uppercase text-nav-text">
-                  Browse Listings
+                  Shop
                 </span>
               </div>
               {/* Bottom Layer */}
               <div className="absolute inset-0 flex items-center bg-nav-text text-nav-bg transition-all duration-300 ease-in-out opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0">
                 <span className="text-lg font-medium tracking-wide uppercase">
-                  Browse Listings
+                  Shop
                 </span>
               </div>
             </a>
-            <a 
-              href="#about" 
-              className="block relative overflow-hidden py-2 border-b border-nav-border group h-12"
-            >
-              {/* Top Layer */}
-              <div className="absolute inset-0 flex items-center transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:-translate-y-full">
-                <span className="text-lg font-medium tracking-wide uppercase text-nav-text">
-                  About
-                </span>
+              {/* Search Bar for Mobile */}
+              <div className="block relative overflow-hidden py-2 group">
+                <div className="relative w-full">
+                  <input 
+                    type="text" 
+                    placeholder="Search..." 
+                    className="w-full bg-transparent border border-nav-border rounded-md px-4 py-3 text-nav-text text-sm uppercase tracking-wide placeholder:text-nav-text/40 focus:outline-none focus:border-nav-text transition-colors"
+                  />
+                  <Search size={18} className="absolute right-4 top-1/2 -translate-y-1/2 text-nav-text/40" />
+                </div>
               </div>
-              {/* Bottom Layer */}
-              <div className="absolute inset-0 flex items-center bg-nav-text text-nav-bg transition-all duration-300 ease-in-out opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0">
-                <span className="text-lg font-medium tracking-wide uppercase">
-                  About
-                </span>
-              </div>
-            </a>
-            <a 
-              href="#contact" 
-              className="block relative overflow-hidden py-2 group h-12"
-            >
-              {/* Top Layer */}
-              <div className="absolute inset-0 flex items-center transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:-translate-y-full">
-                <span className="text-lg font-medium tracking-wide uppercase text-nav-text">
-                  Contact
-                </span>
-              </div>
-              {/* Bottom Layer */}
-              <div className="absolute inset-0 flex items-center bg-nav-text text-nav-bg transition-all duration-300 ease-in-out opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0">
-                <span className="text-lg font-medium tracking-wide uppercase">
-                  Contact
-                </span>
-              </div>
-            </a>
           </div>
         </div>
       )}
@@ -253,7 +198,7 @@ const Navigation = () => {
       {/* Full Width Dropdown Menu */}
       {isShopDropdownOpen && (
         <div 
-          className="fixed top-16 left-0 w-full bg-black z-40 border-b border-nav-border"
+          className="fixed top-20 left-0 w-full bg-nav-bg z-40 border-b border-nav-border"
           onMouseEnter={() => setIsShopDropdownOpen(true)}
           onMouseLeave={() => setIsShopDropdownOpen(false)}
         >
@@ -263,27 +208,27 @@ const Navigation = () => {
               <div className="w-1/2 p-12 flex">
                 {/* Categories Column */}
                 <div className="w-1/2 pr-8">
-                  <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-6 opacity-60">Categories</h3>
+                  <h3 className="text-nav-text text-sm font-bold uppercase tracking-wider mb-6 opacity-60">Categories</h3>
                   <div className="space-y-3">
-                    <a href="#" className="block text-white hover:text-gray-300 transition-colors text-lg font-medium uppercase tracking-wide">ALL LISTINGS</a>
-                    <a href="#" className="block text-white hover:text-gray-300 transition-colors text-lg font-medium uppercase tracking-wide">HIJABS</a>
-                    <a href="#" className="block text-white hover:text-gray-300 transition-colors text-lg font-medium uppercase tracking-wide">ABAYAS</a>
-                    <a href="#" className="block text-white hover:text-gray-300 transition-colors text-lg font-medium uppercase tracking-wide">MODEST WEAR</a>
-                    <a href="#" className="block text-white hover:text-gray-300 transition-colors text-lg font-medium uppercase tracking-wide">ACCESSORIES</a>
-                    <a href="#" className="block text-white hover:text-gray-300 transition-colors text-lg font-medium uppercase tracking-wide">NEW LISTINGS</a>
-                    <a href="#" className="block text-white hover:text-gray-300 transition-colors text-lg font-medium uppercase tracking-wide">FEATURED</a>
-                    <a href="#" className="block text-white hover:text-gray-300 transition-colors text-lg font-medium uppercase tracking-wide">SPECIAL DEALS</a>
+                    <a href="#" className="block text-nav-text hover:text-nav-text/70 transition-colors text-lg font-medium uppercase tracking-wide">ALL SHOES</a>
+                    <a href="#" className="block text-nav-text hover:text-nav-text/70 transition-colors text-lg font-medium uppercase tracking-wide">SNEAKERS</a>
+                    <a href="#" className="block text-nav-text hover:text-nav-text/70 transition-colors text-lg font-medium uppercase tracking-wide">BOOTS</a>
+                    <a href="#" className="block text-nav-text hover:text-nav-text/70 transition-colors text-lg font-medium uppercase tracking-wide">FORMAL</a>
+                    <a href="#" className="block text-nav-text hover:text-nav-text/70 transition-colors text-lg font-medium uppercase tracking-wide">ACCESSORIES</a>
+                    <a href="#" className="block text-nav-text hover:text-nav-text/70 transition-colors text-lg font-medium uppercase tracking-wide">NEW ARRIVALS</a>
+                    <a href="#" className="block text-nav-text hover:text-nav-text/70 transition-colors text-lg font-medium uppercase tracking-wide">FEATURED</a>
+                    <a href="#" className="block text-nav-text hover:text-nav-text/70 transition-colors text-lg font-medium uppercase tracking-wide">SALE</a>
                   </div>
                 </div>
                 
                 {/* Collections Column */}
                 <div className="w-1/2 pl-8">
-                  <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-6 opacity-60">Browse By</h3>
+                  <h3 className="text-nav-text text-sm font-bold uppercase tracking-wider mb-6 opacity-60">Browse By</h3>
                   <div className="space-y-3">
-                    <a href="#" className="block text-white hover:text-gray-300 transition-colors text-lg font-medium uppercase tracking-wide">LOCATION</a>
-                    <a href="#" className="block text-white hover:text-gray-300 transition-colors text-lg font-medium uppercase tracking-wide">PRICE RANGE</a>
-                    <a href="#" className="block text-white hover:text-gray-300 transition-colors text-lg font-medium uppercase tracking-wide">CONDITION</a>
-                    <a href="#" className="block text-white hover:text-gray-300 transition-colors text-lg font-medium uppercase tracking-wide">RECENTLY ADDED</a>
+                    <a href="#" className="block text-nav-text hover:text-nav-text/70 transition-colors text-lg font-medium uppercase tracking-wide">SIZE</a>
+                    <a href="#" className="block text-nav-text hover:text-nav-text/70 transition-colors text-lg font-medium uppercase tracking-wide">BRAND</a>
+                    <a href="#" className="block text-nav-text hover:text-nav-text/70 transition-colors text-lg font-medium uppercase tracking-wide">PRICE RANGE</a>
+                    <a href="#" className="block text-nav-text hover:text-nav-text/70 transition-colors text-lg font-medium uppercase tracking-wide">COLOR</a>
                   </div>
                 </div>
               </div>
@@ -298,14 +243,14 @@ const Navigation = () => {
                     className="w-1/2 h-full relative block group cursor-pointer overflow-hidden border-r border-nav-border"
                   >
                     <img 
-                      src="/hero1.jpg" 
+                      src="/hero_sneakers.png" 
                       alt="Just Dropped" 
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8 transition-all duration-300 group-hover:from-black/90">
                       <div className="text-white">
-                        <h4 className="text-2xl font-bold uppercase mb-2 transition-all duration-300 group-hover:text-gray-200">NEW LISTINGS</h4>
-                        <p className="text-sm uppercase tracking-wide opacity-80 transition-all duration-300 group-hover:opacity-100">BROWSE THE LATEST HIJAB LISTINGS</p>
+                        <h4 className="text-2xl font-bold uppercase mb-2 transition-all duration-300 group-hover:text-gray-200">NEW ARRIVALS</h4>
+                        <p className="text-sm uppercase tracking-wide opacity-80 transition-all duration-300 group-hover:opacity-100">BROWSE THE LATEST SNEAKERS</p>
                       </div>
                     </div>
                   </a>
@@ -316,14 +261,14 @@ const Navigation = () => {
                     className="w-1/2 h-full relative block group cursor-pointer overflow-hidden"
                   >
                     <img 
-                      src="/hero2.jpg" 
-                      alt="Featured Listings" 
+                      src="/hero_oxfords.png" 
+                      alt="Featured Shoes" 
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 transition-all duration-300 group-hover:from-black/90">
                       <div className="text-white">
-                        <h4 className="text-xl font-bold uppercase mb-1 transition-all duration-300 group-hover:text-gray-200">FEATURED LISTINGS</h4>
-                        <p className="text-xs uppercase tracking-wide opacity-80 transition-all duration-300 group-hover:opacity-100">HANDPICKED PREMIUM SELECTIONS</p>
+                        <h4 className="text-xl font-bold uppercase mb-1 transition-all duration-300 group-hover:text-gray-200">FEATURED SHOES</h4>
+                        <p className="text-xs uppercase tracking-wide opacity-80 transition-all duration-300 group-hover:opacity-100">HANDPICKED PREMIUM STYLES</p>
                       </div>
                     </div>
                   </a>

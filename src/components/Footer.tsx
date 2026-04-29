@@ -5,9 +5,9 @@ import { Instagram, Twitter, Youtube, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white font-sans">
+    <footer className="bg-gray-50 text-black font-sans">
       {/* Hero Banner Section */}
-      <div className="relative overflow-hidden border-t border-b border-gray-600">
+      <div className="relative overflow-hidden border-t border-b border-gray-200">
         <div className="container mx-auto px-4 py-16">
           {/* Header Text */}
           <div className="text-center mb-8">
@@ -18,55 +18,53 @@ const Footer = () => {
           </div>
           
           {/* Large Background Text */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
-            <h1 className="text-8xl md:text-9xl lg:text-[12rem] font-black uppercase tracking-wider text-white font-sans">
-              IKMAN
+          <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+            <h1 className="text-8xl md:text-9xl lg:text-[12rem] font-black uppercase tracking-wider text-black font-sans text-center leading-none">
+              LEATHER<br/>LINE
             </h1>
           </div>
           
           {/* Background Image */}
           <div className="absolute inset-0 opacity-20">
             <img 
-              src="/hero1.jpg" 
-              alt="Hijab collection" 
+              src="/hero_sneakers.png" 
+              alt="Shoe collection" 
               className="w-full h-full object-cover"
             />
           </div>
           
           {/* Logo */}
           <div className="relative z-10 flex justify-center mt-8">
-            <h1 className="text-6xl font-black tracking-tight text-white">
-              IKMAN
-            </h1>
+            <img src="/leather-line.jpg" alt="Leather Line Logo" className="h-24 w-auto object-contain" />
           </div>
         </div>
       </div>
 
       {/* Links Section */}
-      <div className="border-t border-b border-gray-600">
+      <div className="border-t border-b border-gray-200">
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             
             {/* Categories */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-6 text-gray-400">
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-6 text-gray-500">
                 Categories
               </h3>
               <div className="space-y-4">
                 {[
-                  { name: "All Listings", href: "/browse/all" },
-                  { name: "Hijabs", href: "/browse/hijabs" },
-                  { name: "Abayas", href: "/browse/abayas" },
-                  { name: "Modest Wear", href: "/browse/modest-wear" },
+                  { name: "All Shoes", href: "/browse/all" },
+                  { name: "Sneakers", href: "/browse/sneakers" },
+                  { name: "Boots", href: "/browse/boots" },
+                  { name: "Formal Shoes", href: "/browse/formal" },
                   { name: "Accessories", href: "/browse/accessories" },
-                  { name: "New Listings", href: "/browse/new-listings" },
+                  { name: "New Arrivals", href: "/browse/new-arrivals" },
                   { name: "Featured", href: "/browse/featured" },
-                  { name: "Special Deals", href: "/browse/deals" }
+                  { name: "Sale", href: "/browse/sale" }
                 ].map((item) => (
                   <div key={item.name} className="group">
                     <a 
                       href={item.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-200 text-sm font-semibold"
+                      className="text-gray-500 hover:text-black transition-colors duration-200 text-sm font-semibold"
                     >
                       {item.name}
                     </a>
@@ -77,14 +75,14 @@ const Footer = () => {
 
             {/* Support */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-6 text-gray-400">
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-6 text-gray-500">
                 Support
               </h3>
               <div className="space-y-4">
                 {[
                   { name: "My Account", href: "/account" },
-                  { name: "My Listings", href: "/my-listings" },
-                  { name: "Seller Guidelines", href: "/support/seller-guidelines" },
+                  { name: "My Orders", href: "/my-orders" },
+                  { name: "Shipping & Returns", href: "/support/shipping-returns" },
                   { name: "Safety Tips", href: "/support/safety-tips" },
                   { name: "Terms & Conditions", href: "/support/terms-conditions" },
                   { name: "Privacy Policy", href: "/support/privacy-policy" }
@@ -92,7 +90,7 @@ const Footer = () => {
                   <div key={item.name} className="group">
                     <a 
                       href={item.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-200 text-sm font-semibold"
+                      className="text-gray-500 hover:text-black transition-colors duration-200 text-sm font-semibold"
                     >
                       {item.name}
                     </a>
@@ -103,19 +101,19 @@ const Footer = () => {
 
             {/* About */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-6 text-gray-400">
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-6 text-gray-500">
                 About
               </h3>
               <div className="space-y-4">
                 {[
-                  { name: "About IKMAN", href: "/about" },
+                  { name: "About Leather Line", href: "/about" },
                   { name: "How It Works", href: "/how-it-works" },
                   { name: "Contact", href: "/contact" }
                 ].map((item) => (
                   <div key={item.name} className="group">
                     <a 
                       href={item.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-200 text-sm font-semibold"
+                      className="text-gray-500 hover:text-black transition-colors duration-200 text-sm font-semibold"
                     >
                       {item.name}
                     </a>
@@ -126,7 +124,7 @@ const Footer = () => {
 
             {/* Social Media */}
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-6 text-gray-400">
+              <h3 className="text-sm font-bold uppercase tracking-wider mb-6 text-gray-500">
                 Social Media
               </h3>
               <div className="space-y-4">
@@ -141,7 +139,7 @@ const Footer = () => {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-white transition-colors duration-200 text-sm font-semibold flex items-center gap-2"
+                      className="text-gray-500 hover:text-black transition-colors duration-200 text-sm font-semibold flex items-center gap-2"
                     >
                       <item.icon className="w-4 h-4" />
                       {item.name}
@@ -166,20 +164,20 @@ const Footer = () => {
                   type="email"
                   placeholder="Your Email Address"
                   required
-                  className="bg-black border-gray-600 text-white placeholder:text-gray-400 focus:border-white rounded-r-none font-medium"
+                  className="bg-white border-gray-300 text-black placeholder:text-gray-400 focus:border-black rounded-r-none font-medium"
                 />
                 <Button 
                   type="submit"
-                  className="bg-white text-black hover:bg-gray-200 rounded-l-none border border-gray-600 border-l-0 font-bold"
+                  className="bg-black text-white hover:bg-gray-800 rounded-l-none border border-black border-l-0 font-bold"
                 >
                   Subscribe
                 </Button>
               </div>
-              <label className="flex items-start gap-2 text-xs text-gray-400">
+              <label className="flex items-start gap-2 text-xs text-gray-500">
                 <input 
                   type="checkbox" 
                   required 
-                  className="mt-1 rounded border-gray-600 bg-black text-white focus:ring-white"
+                  className="mt-1 rounded border-gray-300 bg-white text-black focus:ring-black"
                 />
                 <span className="font-medium">By subscribing you agree to the Privacy Policy</span>
               </label>
@@ -187,19 +185,19 @@ const Footer = () => {
           </div>
 
           {/* Legal Links and Copyright */}
-          <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 text-xs text-gray-400 font-medium">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 text-xs text-gray-500 font-medium">
             <div className="flex gap-4">
-              <a href="/support/terms-conditions" className="hover:text-white transition-colors font-semibold">
+              <a href="/support/terms-conditions" className="hover:text-black transition-colors font-semibold">
                 Terms & Conditions
               </a>
-              <a href="/support/privacy-policy" className="hover:text-white transition-colors font-semibold">
+              <a href="/support/privacy-policy" className="hover:text-black transition-colors font-semibold">
                 Privacy Policy
               </a>
             </div>
-            <Separator orientation="vertical" className="hidden lg:block h-4 bg-gray-600" />
+            <Separator orientation="vertical" className="hidden lg:block h-4 bg-gray-300" />
             <div className="flex gap-4 font-semibold">
               <span>2025</span>
-              <span>© IKMAN</span>
+              <span>© LEATHER LINE</span>
             </div>
           </div>
         </div>

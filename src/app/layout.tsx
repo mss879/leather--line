@@ -3,53 +3,53 @@ import "@/index.css";
 import Providers from "./providers";
 
 export const metadata: Metadata = {
-  title: "Hijab Boutique - Elegant Collection of Premium Hijabs | Modest Fashion",
+  title: "Leather Line - Premium High-End Footwear | Luxury Shoes",
   description:
-    "Discover our curated selection of premium hijabs, scarves, and modest fashion. Timeless designs crafted with the finest materials for the modern woman who values both style and modesty. Shop luxury hijabs online.",
+    "Discover our curated collection of premium leather shoes, sneakers, boots, and oxfords. Unmatched craftsmanship and luxury footwear designed for comfort and style.",
   keywords: [
-    "hijab",
-    "modest fashion",
-    "premium hijabs",
-    "luxury scarves",
-    "islamic fashion",
-    "women's hijabs",
-    "elegant hijabs",
-    "designer hijabs",
-    "modest clothing",
-    "hijab boutique",
-    "hijab online shopping",
+    "leather shoes",
+    "premium footwear",
+    "luxury sneakers",
+    "leather boots",
+    "formal oxfords",
+    "high-end shoes",
+    "leather line",
+    "handcrafted shoes",
+    "designer footwear",
+    "comfortable luxury shoes",
+    "buy shoes online",
   ],
-  authors: [{ name: "Hijab Boutique" }],
+  authors: [{ name: "Leather Line" }],
   robots: "index, follow",
   icons: {
-    icon: "/hijab boutique logo.png",
-    shortcut: "/hijab boutique logo.png",
-    apple: "/hijab boutique logo.png",
+    icon: "/leather-line.jpg",
+    shortcut: "/leather-line.jpg",
+    apple: "/leather-line.jpg",
   },
   openGraph: {
-    title: "Hijab Boutique - Elegant Collection of Premium Hijabs | Modest Fashion",
+    title: "Leather Line - Premium High-End Footwear | Luxury Shoes",
     description:
-      "Discover our curated selection of premium hijabs, scarves, and modest fashion. Timeless designs crafted with the finest materials for the modern woman who values both style and modesty.",
+      "Discover our curated collection of premium leather shoes, sneakers, boots, and oxfords. Unmatched craftsmanship and luxury footwear designed for comfort and style.",
     type: "website",
     url: "/",
     images: [
       {
-        url: "/hijab boutique logo.png",
-        alt: "Hijab Boutique Logo - Premium Modest Fashion",
+        url: "/leather-line.jpg",
+        alt: "Leather Line Logo - Premium Footwear",
       },
     ],
-    siteName: "Hijab Boutique",
+    siteName: "Leather Line",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hijab Boutique - Elegant Collection of Premium Hijabs",
+    title: "Leather Line - Premium High-End Footwear",
     description:
-      "Discover our curated selection of premium hijabs and modest fashion. Timeless designs for the modern woman.",
+      "Discover our curated collection of premium leather shoes, sneakers, boots, and oxfords. Unmatched craftsmanship and luxury.",
     images: [
       {
-        url: "/hijab boutique logo.png",
-        alt: "Hijab Boutique Logo",
+        url: "/leather-line.jpg",
+        alt: "Leather Line Logo",
       },
     ],
   },
@@ -69,29 +69,29 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Store",
-              name: "Hijab Boutique",
+              name: "Leather Line",
               description:
-                "Premium hijabs and modest fashion boutique offering elegant designs crafted with the finest materials",
+                "Premium footwear brand offering an elegant collection of leather shoes, sneakers, boots, and oxfords crafted with the finest materials.",
               url: "/",
-              logo: "/hijab boutique logo.png",
-              image: "/hijab boutique logo.png",
-              priceRange: "$$",
+              logo: "/leather-line.jpg",
+              image: "/leather-line.jpg",
+              priceRange: "$$$",
               sameAs: [],
               offers: {
                 "@type": "AggregateOffer",
-                category: "Clothing & Fashion",
+                category: "Clothing & Shoes",
                 itemCondition: "https://schema.org/NewCondition",
               },
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
-                name: "Hijab Collection",
+                name: "Footwear Collection",
                 itemListElement: [
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Product",
-                      name: "Premium Hijabs",
-                      category: "Modest Fashion",
+                      name: "Premium Leather Shoes",
+                      category: "Luxury Footwear",
                     },
                   },
                 ],

@@ -144,15 +144,6 @@ const HeroSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
             {/* Left Column - Text Content */}
             <div className="max-w-2xl">
-              {/* Main Heading with word-by-word animation */}
-              <div className="mb-6 md:mb-8">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-black mb-4 md:mb-6 leading-[0.9] tracking-tight drop-shadow-sm">
-                  <AnimatedText delay={0.2} animationKey={animationKey}>
-                    {slides[currentSlide].title}
-                  </AnimatedText>
-                </h1>
-              </div>
-
               {/* Description with word-by-word animation */}
               <div className="mb-8 md:mb-12">
                 <div className="bg-white/40 backdrop-blur-sm border border-black/10 rounded-lg p-6 max-w-lg">

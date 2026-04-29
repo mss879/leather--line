@@ -28,7 +28,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="w-full bg-nav-bg text-nav-text relative z-50">
+    <nav className="w-full bg-nav-bg text-nav-text sticky top-0 z-50">
       {/* Single Navigation Row */}
       <div className="border-b border-t border-nav-border">
         <div className="w-full px-4 md:px-8">
